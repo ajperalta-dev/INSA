@@ -212,12 +212,14 @@
   <!-- ========================================================================= -->
   <!-- 3. SECCIÓN HERO (NUEVO DISEÑO MODERNO, CLARO Y ESTRUCTURADO) -->
   <!-- ========================================================================= -->
-  <section id="inicio" class="relative py-16 sm:py-20 bg-gradient-to-b from-slate-50 via-white to-slate-50 border-b border-slate-200 overflow-hidden">
+  <section id="inicio" class="relative min-h-0 flex items-center py-16 sm:py-20 lg:py-24 border-b border-slate-200 overflow-hidden bg-insa-navy">
+    <style>#inicio h1 span[data-i18n="hero.titleLine2"] { color: #fff !important; }</style>
+    <img src="images/hero_bg.jpg" alt="Cordillera de San Juan - INSA Consultora" class="absolute inset-0 w-full h-full object-cover object-center" onerror="this.src='https://static.wixstatic.com/media/0968ba_1f83d5fc2f064a2eb2ad334355c47515~mv2.jpg'" />
+    <div class="absolute inset-0 bg-gradient-to-r from-insa-navy/95 via-insa-navy/75 to-insa-navy/30"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-insa-navy/75 via-transparent to-insa-navy/25"></div>
     
     <!-- Elementos orgánicos suaves de fondo inspirados en las hojas del logo -->
-    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-insa-50/60 to-transparent pointer-events-none"></div>
-    <div class="absolute -top-32 right-10 w-96 h-96 bg-insa-100/40 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute bottom-0 left-10 w-72 h-72 bg-insa-50/80 rounded-full blur-2xl pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_75%_35%,rgba(126,200,80,0.18),transparent_32%)] pointer-events-none"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-8">
       
@@ -226,25 +228,30 @@
         
         <!-- Columna Izquierda: Información Principal -->
         <div class="lg:col-span-7 space-y-6 text-left">
+          <div class="hidden">
+            <img src="isologotipo.svg" alt="INSA Consultora" class="w-56 sm:w-72 h-auto brightness-0 invert drop-shadow-2xl" />
+            <div class="hidden sm:block h-12 w-px bg-slate-200"></div>
+            <div class="hidden sm:block text-xs font-bold uppercase tracking-[0.22em] text-insa-navy leading-relaxed">Geología<br />Medio Ambiente<br />Ingeniería</div>
+          </div>
           
           <!-- Badge de Ubicación e Identidad -->
-          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white border border-insa-200 text-insa-navy text-xs font-bold shadow-sm">
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 border border-white/30 text-white text-xs font-bold shadow-sm">
             <span class="w-2.5 h-2.5 rounded-full bg-insa-500"></span>
             <i class="fa-solid fa-mountain text-insa-500"></i>
             <span data-i18n="hero.locationBadge">Cordillera de San Juan • Argentina</span>
           </div>
 
           <!-- Titular Principal -->
-          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-insa-navy tracking-tight leading-[1.15]">
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.08] drop-shadow-lg">
             <span data-i18n="hero.titleLine1">Expertos en</span><br />
-            <span class="text-insa-600" data-i18n="hero.titleHighlight">
+            <span class="text-insa-300" data-i18n="hero.titleHighlight">
               Medio Ambiente, Geología
             </span><br />
             <span class="text-insa-navy" data-i18n="hero.titleLine2">e Ingeniería</span>
           </h1>
 
           <!-- Descripción Corta -->
-          <p class="text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-2xl" data-i18n="hero.description">
+          <p class="text-base sm:text-lg text-white/90 font-normal leading-relaxed max-w-2xl drop-shadow" data-i18n="hero.description">
             Somos una empresa consultora especializada en asesoría y gestión de medio ambiente, geología e ingeniería en San Juan, Argentina. Brindamos soluciones integrales y sostenibles para proyectos innovadores, promoviendo el cuidado del entorno y el desarrollo responsable.
           </p>
 
@@ -277,8 +284,9 @@
         </div>
 
         <!-- Columna Derecha: Tarjeta Visual de Presentación -->
-        <div class="lg:col-span-5">
-          <div class="relative mx-auto max-w-md lg:max-w-none">
+        <div class="hidden lg:col-span-5 lg:flex items-center justify-center min-h-[14rem]">
+          <img src="insa_logo_sin_fondo.png" alt="INSA Consultora" class="w-64 sm:w-80 h-auto opacity-95 drop-shadow-2xl" />
+          <div class="hidden">
             
             <!-- Fotografía Destacada de Campo -->
             <div class="relative rounded-3xl overflow-hidden shadow-card border-4 border-white bg-white">
@@ -593,8 +601,8 @@
 
       </div>
 
-      <!-- Equipo Multidisciplinario (Datos reales del sitio oficial) -->
-      <div>
+      <!-- Equipo multidisciplinario omitido: la consultora se presenta a través de sus dos socios gerentes. -->
+      <div class="hidden">
         <div class="text-center mb-6">
           <h3 class="text-xl font-bold text-insa-navy" data-i18n="about.multidisciplinary">Equipo Multidisciplinario</h3>
           <p class="text-xs text-slate-500 mt-1" data-i18n="about.multidisciplinaryDesc">Profesionales especializados que integran nuestros estudios y relevamientos de campo.</p>
