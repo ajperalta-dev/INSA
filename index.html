@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INSA Consultora | Geología, Medio Ambiente e Ingeniería en San Juan, Argentina</title>
+  <meta name="description" content="INSA Consultora - Expertos en Geología, Medio Ambiente e Ingeniería en San Juan, Argentina. Asesoría integral y sostenible para la industria minera, ambiental e infraestructura." />
+  <link rel="icon" type="image/svg+xml" href="isotipo.svg" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6.5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            insa: {
+              50: '#f4f9f0',
+              100: '#e5f4da',
+              200: '#cfe8bc',
+              300: '#acda8e',
+              400: '#83c45e',
+              500: '#73bc49', // Verde oficial de las hojas del logo INSA
+              600: '#5ba035',
+              700: '#467c2b',
+              800: '#396325',
+              900: '#305221',
+              // Azul petróleo y marino del tallo y letras del logo
+              navy: '#0e3048',
+              'navy-light': '#1b4b6e',
+              'navy-dark': '#081e2e',
+              slate: '#f8fafc',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          boxShadow: {
+            'subtle': '0 4px 20px -2px rgba(14, 48, 72, 0.06)',
+            'card': '0 10px 30px -5px rgba(14, 48, 72, 0.08)',
+            'glow-green': '0 8px 25px -4px rgba(115, 188, 73, 0.35)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * {
+      transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+    .lightbox-active {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased selection:bg-insa-500 selection:text-white">
+
+  <!-- ========================================================================= -->
+  <!-- 1. BARRA SUPERIOR (TOP BAR CLARA) -->
+  <!-- ========================================================================= -->
+  <div class="bg-slate-50 border-b border-slate-200/80 text-xs text-slate-600 py-2.5 px-4 sm:px-8 z-50 relative">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+      
+      <!-- Ubicación y Teléfonos -->
+      <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 sm:gap-6">
+        <a href="https://maps.google.com/?q=Av.+Virgen+de+Lourdes+1275,+San+Juan,+Argentina" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-insa-navy transition-colors font-medium">
+          <i class="fa-solid fa-location-dot text-insa-500"></i>
+          <span>Av. Virgen de Lourdes 1275, 5400 San Juan, ARG</span>
+        </a>
+        <div class="hidden sm:flex items-center gap-4">
+          <a href="tel:+5492645438185" class="flex items-center gap-1.5 hover:text-insa-navy transition-colors">
+            <i class="fa-solid fa-phone text-insa-500"></i>
+            <span>+54 9 264 543-8185</span>
+          </a>
+          <a href="tel:+5492644032518" class="flex items-center gap-1.5 hover:text-insa-navy transition-colors">
+            <i class="fa-solid fa-mobile-screen text-insa-500"></i>
+            <span>+54 9 264 403-2518</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Correo, Redes Sociales Reales y Selector de Idioma -->
+      <div class="flex items-center gap-4 sm:gap-5">
+        <a href="mailto:info@insaconsultora.com" class="flex items-center gap-1.5 text-slate-700 hover:text-insa-navy font-medium transition-colors">
+          <i class="fa-solid fa-envelope text-insa-500"></i>
+          <span>info@insaconsultora.com</span>
+        </a>
+
+        <!-- Redes Sociales Oficiales -->
+        <div class="flex items-center gap-2.5 border-l border-slate-200 pl-4">
+          <a href="https://www.linkedin.com/company/insa-consultora/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-insa-navy transition-colors" aria-label="LinkedIn INSA Consultora" title="LinkedIn Oficial">
+            <i class="fa-brands fa-linkedin text-sm"></i>
+          </a>
+          <a href="https://www.instagram.com/insa_consultora?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-insa-500 transition-colors" aria-label="Instagram INSA Consultora" title="Instagram Oficial">
+            <i class="fa-brands fa-instagram text-sm"></i>
+          </a>
+        </div>
+
+        <div class="h-3.5 w-px bg-slate-300 hidden sm:block"></div>
+
+        <!-- SELECTOR DE IDIOMAS MULTINIVEL (ES / EN / FR) -->
+        <div class="relative inline-block text-left" id="langDropdownContainer">
+          <button id="langButton" type="button" class="inline-flex items-center gap-1.5 bg-white hover:bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-md text-xs font-semibold text-slate-700 transition-all focus:outline-none focus:ring-1 focus:ring-insa-500 shadow-sm">
+            <span id="currentFlag" class="text-sm">🇦🇷</span>
+            <span id="currentLangLabel">ES</span>
+            <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 ml-0.5"></i>
+          </button>
+          
+          <div id="langMenu" class="hidden absolute right-0 mt-1.5 w-32 rounded-lg bg-white border border-slate-200 shadow-lg py-1 z-50">
+            <button onclick="setLanguage('es')" class="w-full text-left px-3 py-1.5 text-xs text-slate-700 hover:bg-insa-50 hover:text-insa-navy flex items-center gap-2">
+              <span>🇦🇷</span> <span>Español</span>
+            </button>
+            <button onclick="setLanguage('en')" class="w-full text-left px-3 py-1.5 text-xs text-slate-700 hover:bg-insa-50 hover:text-insa-navy flex items-center gap-2">
+              <span>🇬🇧</span> <span>English</span>
+            </button>
+            <button onclick="setLanguage('fr')" class="w-full text-left px-3 py-1.5 text-xs text-slate-700 hover:bg-insa-50 hover:text-insa-navy flex items-center gap-2">
+              <span>🇫🇷</span> <span>Français</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 2. NAVEGACIÓN PRINCIPAL (HEADER CLARO) -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3 flex items-center justify-between">
+      
+      <!-- LOGOTIPO CORPORATIVO OFICIAL INSA -->
+      <a href="#inicio" class="flex items-center gap-3.5 group" aria-label="INSA Consultora Inicio">
+        <div class="relative w-12 h-12 flex-shrink-0 bg-white p-1 rounded-xl border border-slate-200/80 shadow-sm group-hover:border-insa-500 transition-all">
+          <img src="isotipo.svg" alt="Isotipo INSA" class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl font-black tracking-wider text-insa-navy group-hover:text-insa-600 transition-colors">INSA</span>
+            <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-insa-50 text-insa-700 border border-insa-200 tracking-wider">CONSULTORA</span>
+          </div>
+          <span class="text-[10px] tracking-widest text-slate-500 font-medium uppercase" data-i18n="nav.subtitle">
+            Geología • Medio Ambiente • Ingeniería
+          </span>
+        </div>
+      </a>
+
+      <!-- ENLACES DE NAVEGACIÓN DESKTOP -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold">
+        <a href="#inicio" class="text-slate-700 hover:text-insa-navy transition-colors py-1 border-b-2 border-transparent hover:border-insa-500" data-i18n="nav.home">Inicio</a>
+        <a href="#servicios" class="text-slate-700 hover:text-insa-navy transition-colors py-1 border-b-2 border-transparent hover:border-insa-500" data-i18n="nav.services">Servicios</a>
+        <a href="#nosotros" class="text-slate-700 hover:text-insa-navy transition-colors py-1 border-b-2 border-transparent hover:border-insa-500" data-i18n="nav.about">Nosotros</a>
+        <a href="#experiencia" class="text-slate-700 hover:text-insa-navy transition-colors py-1 border-b-2 border-transparent hover:border-insa-500" data-i18n="nav.work">Nuestro Trabajo</a>
+        <a href="#galeria" class="text-slate-700 hover:text-insa-navy transition-colors py-1 border-b-2 border-transparent hover:border-insa-500" data-i18n="nav.gallery">Galería</a>
+        <a href="#contacto" class="text-slate-700 hover:text-insa-navy transition-colors py-1 border-b-2 border-transparent hover:border-insa-500" data-i18n="nav.contact">Contacto</a>
+      </nav>
+
+      <!-- BOTÓN DESTACADO CONTACTAR -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="#contacto" class="px-5 py-2.5 text-xs font-bold rounded-xl bg-insa-500 hover:bg-insa-600 text-white shadow-md hover:shadow-glow-green transition-all flex items-center gap-2">
+          <i class="fa-regular fa-paper-plane"></i>
+          <span data-i18n="nav.ctaContact">Contactar</span>
+        </a>
+      </div>
+
+      <!-- BOTÓN MENÚ MÓVIL HAMBURGUESA -->
+      <button id="mobileMenuBtn" type="button" class="lg:hidden p-2 rounded-lg bg-slate-100 text-slate-700 hover:text-insa-navy border border-slate-200 focus:outline-none" aria-label="Abrir menú de navegación">
+        <i class="fa-solid fa-bars text-lg" id="menuIcon"></i>
+      </button>
+
+    </div>
+
+    <!-- MENÚ MÓVIL DESPLEGABLE -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-5 space-y-4 shadow-lg">
+      <nav class="flex flex-col space-y-3 text-base font-medium">
+        <a href="#inicio" onclick="closeMobileMenu()" class="text-slate-700 hover:text-insa-navy py-1 flex items-center gap-2.5">
+          <i class="fa-solid fa-house text-insa-500 w-5"></i> <span data-i18n="nav.home">Inicio</span>
+        </a>
+        <a href="#servicios" onclick="closeMobileMenu()" class="text-slate-700 hover:text-insa-navy py-1 flex items-center gap-2.5">
+          <i class="fa-solid fa-briefcase text-insa-500 w-5"></i> <span data-i18n="nav.services">Servicios</span>
+        </a>
+        <a href="#nosotros" onclick="closeMobileMenu()" class="text-slate-700 hover:text-insa-navy py-1 flex items-center gap-2.5">
+          <i class="fa-solid fa-users text-insa-500 w-5"></i> <span data-i18n="nav.about">Nosotros</span>
+        </a>
+        <a href="#experiencia" onclick="closeMobileMenu()" class="text-slate-700 hover:text-insa-navy py-1 flex items-center gap-2.5">
+          <i class="fa-solid fa-mountain text-insa-500 w-5"></i> <span data-i18n="nav.work">Nuestro Trabajo</span>
+        </a>
+        <a href="#galeria" onclick="closeMobileMenu()" class="text-slate-700 hover:text-insa-navy py-1 flex items-center gap-2.5">
+          <i class="fa-solid fa-images text-insa-500 w-5"></i> <span data-i18n="nav.gallery">Galería</span>
+        </a>
+        <a href="#contacto" onclick="closeMobileMenu()" class="text-slate-700 hover:text-insa-navy py-1 flex items-center gap-2.5">
+          <i class="fa-solid fa-envelope text-insa-500 w-5"></i> <span data-i18n="nav.contact">Contacto</span>
+        </a>
+      </nav>
+      <div class="pt-3 border-t border-slate-200">
+        <a href="#contacto" onclick="closeMobileMenu()" class="w-full py-2.5 text-center rounded-xl bg-insa-500 text-white font-bold text-sm shadow-md block">
+          <span data-i18n="nav.ctaContact">Contactar</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- 3. SECCIÓN HERO (NUEVO DISEÑO MODERNO, CLARO Y ESTRUCTURADO) -->
+  <!-- ========================================================================= -->
+  <section id="inicio" class="relative py-16 sm:py-20 bg-gradient-to-b from-slate-50 via-white to-slate-50 border-b border-slate-200 overflow-hidden">
+    
+    <!-- Elementos orgánicos suaves de fondo inspirados en las hojas del logo -->
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-insa-50/60 to-transparent pointer-events-none"></div>
+    <div class="absolute -top-32 right-10 w-96 h-96 bg-insa-100/40 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-10 w-72 h-72 bg-insa-50/80 rounded-full blur-2xl pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <!-- Contenedor Principal del Hero en Grid de 2 Columnas -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        
+        <!-- Columna Izquierda: Información Principal -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          
+          <!-- Badge de Ubicación e Identidad -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white border border-insa-200 text-insa-navy text-xs font-bold shadow-sm">
+            <span class="w-2.5 h-2.5 rounded-full bg-insa-500"></span>
+            <i class="fa-solid fa-mountain text-insa-500"></i>
+            <span data-i18n="hero.locationBadge">Cordillera de San Juan • Argentina</span>
+          </div>
+
+          <!-- Titular Principal -->
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-insa-navy tracking-tight leading-[1.15]">
+            <span data-i18n="hero.titleLine1">Expertos en</span><br />
+            <span class="text-insa-600" data-i18n="hero.titleHighlight">
+              Medio Ambiente, Geología
+            </span><br />
+            <span class="text-insa-navy" data-i18n="hero.titleLine2">e Ingeniería</span>
+          </h1>
+
+          <!-- Descripción Corta -->
+          <p class="text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-2xl" data-i18n="hero.description">
+            Somos una empresa consultora especializada en asesoría y gestión de medio ambiente, geología e ingeniería en San Juan, Argentina. Brindamos soluciones integrales y sostenibles para proyectos innovadores, promoviendo el cuidado del entorno y el desarrollo responsable.
+          </p>
+
+          <!-- Accesos Rápidos a las 3 Especialidades -->
+          <div class="pt-1 flex flex-wrap gap-2">
+            <a href="#servicios" class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-insa-500 hover:text-insa-navy text-xs font-semibold shadow-sm transition-all flex items-center gap-1.5">
+              <i class="fa-solid fa-leaf text-insa-500"></i> Medio Ambiente
+            </a>
+            <a href="#servicios" class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-insa-navy hover:text-insa-navy text-xs font-semibold shadow-sm transition-all flex items-center gap-1.5">
+              <i class="fa-solid fa-gem text-insa-navy"></i> Geología
+            </a>
+            <a href="#servicios" class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-insa-500 hover:text-insa-navy text-xs font-semibold shadow-sm transition-all flex items-center gap-1.5">
+              <i class="fa-solid fa-helmet-safety text-insa-500"></i> Ingeniería
+            </a>
+          </div>
+
+          <!-- Botones de Acción principales (Sin palabras cotizar) -->
+          <div class="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <a href="#contacto" class="px-8 py-3.5 rounded-xl bg-insa-500 hover:bg-insa-600 text-white font-bold text-sm tracking-wide shadow-md hover:shadow-glow-green transition-all flex items-center justify-center gap-2.5">
+              <i class="fa-solid fa-envelope"></i>
+              <span data-i18n="hero.ctaContact">Contactar Especialista</span>
+            </a>
+            
+            <a href="#servicios" class="px-8 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-insa-navy font-bold text-sm tracking-wide border-2 border-insa-navy hover:border-insa-600 shadow-sm transition-all flex items-center justify-center gap-2.5">
+              <i class="fa-solid fa-compass text-insa-500"></i>
+              <span data-i18n="hero.ctaServices">Explorar Servicios</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Columna Derecha: Tarjeta Visual de Presentación -->
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <!-- Fotografía Destacada de Campo -->
+            <div class="relative rounded-3xl overflow-hidden shadow-card border-4 border-white bg-white">
+              <img src="images/hero_bg.jpg" alt="Cordillera de San Juan - INSA Consultora" class="w-full h-80 sm:h-96 object-cover object-center" onerror="this.src='https://static.wixstatic.com/media/0968ba_1f83d5fc2f064a2eb2ad334355c47515~mv2.jpg'" />
+              <div class="absolute inset-0 bg-gradient-to-t from-insa-navy/85 via-insa-navy/20 to-transparent"></div>
+              
+              <!-- Pie informativo sobre la foto -->
+              <div class="absolute bottom-5 left-5 right-5 text-white space-y-1">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded bg-insa-500 text-white text-[10px] font-bold uppercase tracking-wider">San Juan, Argentina</span>
+                </div>
+                <h3 class="text-base font-bold text-white">Gestión y Consultoría en Terreno</h3>
+                <p class="text-xs text-slate-200">Asesoría multidisciplinaria en Medio Ambiente, Geología e Ingeniería.</p>
+              </div>
+            </div>
+
+            <!-- Tarjeta flotante inferior de contacto rápido -->
+            <div class="mt-4 p-4 rounded-2xl bg-white border border-slate-200 shadow-lg flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-insa-50 text-insa-500 border border-insa-200 flex items-center justify-center text-lg flex-shrink-0">
+                  <i class="fa-solid fa-headset"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-insa-navy">¿Tienes una consulta técnica?</div>
+                  <div class="text-[11px] text-slate-500">Respuesta en días hábiles</div>
+                </div>
+              </div>
+              <a href="#contacto" class="px-4 py-2 rounded-xl bg-insa-navy hover:bg-insa-navy-light text-white text-xs font-bold transition-all flex-shrink-0">
+                Contactar
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 4. SECCIÓN DE SERVICIOS (01 / ÁREAS DE EXPERTISE) -->
+  <!-- ========================================================================= -->
+  <section id="servicios" class="py-20 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <!-- Encabezado Oficial "01 SERVICIOS" -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-insa-500 font-black text-2xl font-mono">01</span>
+            <div class="h-0.5 w-10 bg-insa-500"></div>
+            <span class="text-xs font-bold tracking-widest uppercase text-insa-navy" data-i18n="services.sectionTag">Áreas de Expertise</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-black text-insa-navy" data-i18n="services.sectionTitle">
+            Nuestros Servicios
+          </h2>
+        </div>
+        <p class="max-w-md text-sm text-slate-600" data-i18n="services.sectionDesc">
+          Brindamos soluciones integrales al negocio minero, desde el inicio de las operaciones de exploración con asesoramiento en Medio Ambiente, para luego integrar con la Geología y finalmente con el diseño de Ingeniería.
+        </p>
+      </div>
+
+      <!-- Tarjetas de las 3 Áreas Principales -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- SERVICIO 1: MEDIO AMBIENTE -->
+        <div class="rounded-2xl bg-white p-8 border-2 border-slate-100 hover:border-insa-500 shadow-card transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-insa-50 border border-insa-200 text-insa-500 flex items-center justify-center text-2xl mb-6 group-hover:bg-insa-500 group-hover:text-white transition-all duration-300 shadow-sm">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            
+            <div class="text-xs font-mono font-bold text-insa-600 mb-1">01.01</div>
+            <h3 class="text-2xl font-bold text-insa-navy mb-2" data-i18n="service1.title">Medio Ambiente</h3>
+            <p class="text-sm font-semibold text-insa-600 mb-4" data-i18n="service1.subtitle">Asesoría y Gestión en Medio Ambiente</p>
+            
+            <p class="text-sm text-slate-600 leading-relaxed mb-6" data-i18n="service1.body">
+              Gestión ambiental y regulatoria integral. Elaboración de Declaraciones de Impacto Ambiental, Certificados Ambientales Anuales y atención técnica ante los organismos de aplicación.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-slate-600 mb-8 border-t border-slate-100 pt-4">
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-insa-500 mt-0.5"></i>
+                <span data-i18n="service1.item1">Evaluaciones y Declaraciones de Impacto Ambiental (EIA / DIA).</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-insa-500 mt-0.5"></i>
+                <span data-i18n="service1.item2">Certificados Ambientales Anuales (CAA) y Residuos Peligrosos.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-insa-500 mt-0.5"></i>
+                <span data-i18n="service1.item3">Representación técnica ante la Secretaría de Medio Ambiente (RCA N.º 146).</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-insa-500 mt-0.5"></i>
+                <span data-i18n="service1.item4">Auditorías ISO 14001:2015, monitoreos y cumplimiento de condicionantes.</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="#contacto" onclick="selectServiceInForm('Medio Ambiente')" class="inline-flex items-center gap-2 text-xs font-bold text-insa-navy hover:text-insa-600 transition-colors pt-2">
+            <span data-i18n="services.quoteBtn">Consultar Medio Ambiente</span>
+            <i class="fa-solid fa-arrow-right text-insa-500"></i>
+          </a>
+        </div>
+
+        <!-- SERVICIO 2: GEOLOGÍA -->
+        <div class="rounded-2xl bg-white p-8 border-2 border-slate-100 hover:border-insa-navy shadow-card transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-200 text-insa-navy flex items-center justify-center text-2xl mb-6 group-hover:bg-insa-navy group-hover:text-white transition-all duration-300 shadow-sm">
+              <i class="fa-solid fa-gem"></i>
+            </div>
+            
+            <div class="text-xs font-mono font-bold text-insa-navy mb-1">01.02</div>
+            <h3 class="text-2xl font-bold text-insa-navy mb-2" data-i18n="service2.title">Geología</h3>
+            <p class="text-sm font-semibold text-insa-navy mb-4" data-i18n="service2.subtitle">Modelos Geológicos y Estimación de Recursos</p>
+            
+            <p class="text-sm text-slate-600 leading-relaxed mb-6" data-i18n="service2.body">
+              Modelamiento geológico 3D y evaluación de recursos minerales con rigor técnico internacional. Especialistas con acreditación AusIMM CP (Geo).
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-slate-600 mb-8 border-t border-slate-100 pt-4">
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-insa-500 mt-0.5"></i>
+                <span data-i18n="service2.item1">Modelos geológicos estructurales, litológicos y de alteración 3D.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-insa-500 mt-0.5"></i>
+                <span data-i18n="service2.item2">Estimación de Recursos Minerales bajo códigos JORC y NI 43-101.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-insa-500 mt-0.5"></i>
+                <span data-i18n="service2.item3">Supervisión y control de campañas de perforación (DDH y RC).</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-insa-500 mt-0.5"></i>
+                <span data-i18n="service2.item4">Mapeo estructural de campo y protocolos de muestreo QA/QC.</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="#contacto" onclick="selectServiceInForm('Geología')" class="inline-flex items-center gap-2 text-xs font-bold text-insa-navy hover:text-insa-600 transition-colors pt-2">
+            <span data-i18n="services.quoteBtn">Consultar Geología</span>
+            <i class="fa-solid fa-arrow-right text-insa-500"></i>
+          </a>
+        </div>
+
+        <!-- SERVICIO 3: INGENIERÍA -->
+        <div class="rounded-2xl bg-white p-8 border-2 border-slate-100 hover:border-insa-500 shadow-card transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-insa-50 border border-insa-200 text-insa-500 flex items-center justify-center text-2xl mb-6 group-hover:bg-insa-500 group-hover:text-white transition-all duration-300 shadow-sm">
+              <i class="fa-solid fa-helmet-safety"></i>
+            </div>
+            
+            <div class="text-xs font-mono font-bold text-insa-600 mb-1">01.03</div>
+            <h3 class="text-2xl font-bold text-insa-navy mb-2" data-i18n="service3.title">Ingeniería</h3>
+            <p class="text-sm font-semibold text-insa-600 mb-4" data-i18n="service3.subtitle">Asesoría en Ingeniería en Minas y Proceso</p>
+            
+            <p class="text-sm text-slate-600 leading-relaxed mb-6" data-i18n="service3.body">
+              Diseño de ingeniería y supervisión ambiental de infraestructura minera y eléctrica. Optimización de procesos, manejo de escombreras y supervisión en obra.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-slate-600 mb-8 border-t border-slate-100 pt-4">
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-insa-500 mt-0.5"></i>
+                <span data-i18n="service3.item1">Optimización de procesos mineros, metalúrgicos y balances de agua.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-insa-500 mt-0.5"></i>
+                <span data-i18n="service3.item2">Diseño y estabilidad de escombreras, diques y pilas de lixiviación.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-insa-500 mt-0.5"></i>
+                <span data-i18n="service3.item3">Supervisión en Estaciones Transformadoras (ET) y Líneas de Alta Tensión (LAT).</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-insa-500 mt-0.5"></i>
+                <span data-i18n="service3.item4">Prevención de contingencias operativas y trazabilidad de obra.</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="#contacto" onclick="selectServiceInForm('Ingeniería')" class="inline-flex items-center gap-2 text-xs font-bold text-insa-navy hover:text-insa-600 transition-colors pt-2">
+            <span data-i18n="services.quoteBtn">Consultar Ingeniería</span>
+            <i class="fa-solid fa-arrow-right text-insa-500"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 5. SECCIÓN NOSOTROS / EQUIPO (FOTOGRAFÍAS REALES FLOR.AVIF Y RODRIGO.AVIF) -->
+  <!-- ========================================================================= -->
+  <section id="nosotros" class="py-20 bg-slate-50 border-t border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <!-- Encabezado Oficial "02 LIDERANDO SOLUCIONES SOSTENIBLES" -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-3 mb-2">
+          <span class="text-insa-500 font-black text-2xl font-mono">02</span>
+          <div class="h-0.5 w-10 bg-insa-500"></div>
+          <span class="text-xs font-bold tracking-widest uppercase text-insa-navy" data-i18n="about.sectionTag">Nuestra Empresa y Equipo</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-insa-navy mb-4" data-i18n="about.sectionTitle">
+          Liderando Soluciones Sostenibles
+        </h2>
+        <p class="text-base text-slate-600 leading-relaxed" data-i18n="about.sectionDesc">
+          Somos una micro consultora especializada en asesoría y gestión de Medio Ambiente, Geología e Ingeniería con oficinas en San Juan, Mendoza y Salta, Argentina. Ajustándonos a las necesidades de nuestros clientes y adaptando un plan de trabajo especialmente diseñado para cada situación o proyecto.
+        </p>
+      </div>
+
+      <!-- Tarjetas de los Socios Gerentes con Fotos Reales (flor.avif y rodrigo.avif) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-14">
+        
+        <!-- MARÍA FLORENCIA CAAMAÑO -->
+        <div class="rounded-2xl bg-white border border-slate-200 p-8 shadow-card flex flex-col justify-between">
+          <div>
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 mb-5">
+              <!-- Fotografía Real: flor.avif -->
+              <div class="relative w-24 h-24 rounded-2xl overflow-hidden border-2 border-insa-500 shadow-md flex-shrink-0 bg-slate-100">
+                <img src="images/flor.avif" alt="María Florencia Caamaño" class="w-full h-full object-cover object-top" onerror="this.src='public/images/flor.avif'" />
+              </div>
+              <div>
+                <div class="inline-block px-2 py-0.5 rounded bg-insa-50 text-insa-700 text-[11px] font-bold tracking-wider mb-1">
+                  SOCIA GERENTE
+                </div>
+                <h3 class="text-2xl font-black text-insa-navy">María Florencia Caamaño</h3>
+                <p class="text-sm font-semibold text-insa-600">Ingeniera Ambiental • Especialista en Gestión Ambiental</p>
+                <p class="text-xs text-slate-500 font-mono mt-0.5">P. Eng. (Env) • MP: 4069 • RCA: 146 (Categorías 2a y 2b)</p>
+              </div>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+              Ingeniera Industrial (UNSJ - FI), Diplomada en Gestión Ambiental (Universidad Austral) y Especialista en Docencia Universitaria (UNSJ). Consultora Senior y Socia Gerente de INSA con amplia trayectoria en procesos de ingeniería ambiental, representación técnica ante la Secretaría de Medio Ambiente y auditorías en minería y energía.
+            </p>
+
+            <div class="border-t border-slate-100 pt-4 text-xs text-slate-600 space-y-2">
+              <div class="font-bold text-insa-navy mb-1.5" data-i18n="about.keyExp">Antecedentes Destacados:</div>
+              <div class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-insa-500 mt-0.5"></i>
+                <span>Representación técnica ambiental de YPF Energía Eléctrica S.A. en PSZ I a V, LAT y SET.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-insa-500 mt-0.5"></i>
+                <span>Auditoría de cumplimiento ambiental en Barrick Explotaciones Argentina S.A. (Proyecto Pascua Lama).</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-insa-500 mt-0.5"></i>
+                <span>Auditorías ISO 14001:2015 en operadoras de residuos peligrosos (Tecma San Juan S.A., Eco San Juan S.A.).</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs text-slate-500">UNSJ / Univ. Austral</span>
+            <a href="mailto:info@insaconsultora.com" class="text-xs font-bold text-insa-navy hover:text-insa-600 transition-colors flex items-center gap-1.5">
+              <i class="fa-solid fa-envelope text-insa-500"></i> Contactar
+            </a>
+          </div>
+        </div>
+
+        <!-- LUIS RODRIGO PERALTA -->
+        <div class="rounded-2xl bg-white border border-slate-200 p-8 shadow-card flex flex-col justify-between">
+          <div>
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 mb-5">
+              <!-- Fotografía Real: rodrigo.avif -->
+              <div class="relative w-24 h-24 rounded-2xl overflow-hidden border-2 border-insa-navy shadow-md flex-shrink-0 bg-slate-100">
+                <img src="images/rodrigo.avif" alt="Luis Rodrigo Peralta" class="w-full h-full object-cover object-top" onerror="this.src='public/images/rodrigo.avif'" />
+              </div>
+              <div>
+                <div class="inline-block px-2 py-0.5 rounded bg-slate-100 text-slate-700 text-[11px] font-bold tracking-wider mb-1">
+                  SOCIO GERENTE
+                </div>
+                <h3 class="text-2xl font-black text-insa-navy">Luis Rodrigo Peralta</h3>
+                <p class="text-sm font-semibold text-insa-navy">Geólogo Principal • Esp. en Evaluación de Yacimientos Mineros</p>
+                <p class="text-xs text-slate-500 font-mono mt-0.5">FAusIMM CP (Geo) • MP: J-292 • RCA: 237</p>
+              </div>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+              Geólogo Principal colegiado y acreditado como Chartered Professional FAusIMM CP (Geo) por The Australasian Institute of Mining and Metallurgy. Especialista en modelamiento geológico 3D, estimación de recursos minerales bajo estándares JORC y NI 43-101 y dirección de exploraciones mineras.
+            </p>
+
+            <div class="border-t border-slate-100 pt-4 text-xs text-slate-600 space-y-2">
+              <div class="font-bold text-insa-navy mb-1.5" data-i18n="about.keyExp">Competencias Clave:</div>
+              <div class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-insa-500 mt-0.5"></i>
+                <span>Modelamiento geológico 3D litológico, estructural y de alteración en depósitos andinos.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-insa-500 mt-0.5"></i>
+                <span>Informes técnicos y estimación de recursos minerales según normas JORC y NI 43-101.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-insa-500 mt-0.5"></i>
+                <span>Supervisión de campañas de perforación diamantina (DDH) y protocolos QA/QC.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs text-slate-500">FAusIMM Chartered Professional</span>
+            <a href="mailto:info@insaconsultora.com" class="text-xs font-bold text-insa-navy hover:text-insa-600 transition-colors flex items-center gap-1.5">
+              <i class="fa-solid fa-envelope text-insa-500"></i> Contactar
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Equipo Multidisciplinario (Datos reales del sitio oficial) -->
+      <div>
+        <div class="text-center mb-6">
+          <h3 class="text-xl font-bold text-insa-navy" data-i18n="about.multidisciplinary">Equipo Multidisciplinario</h3>
+          <p class="text-xs text-slate-500 mt-1" data-i18n="about.multidisciplinaryDesc">Profesionales especializados que integran nuestros estudios y relevamientos de campo.</p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5">
+          <div class="p-3.5 rounded-xl bg-white border border-slate-200 text-center shadow-sm">
+            <div class="w-8 h-8 mx-auto rounded-full bg-insa-50 text-insa-500 flex items-center justify-center text-xs mb-2">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <div class="font-bold text-xs text-insa-navy">Andrea Molina</div>
+            <div class="text-[11px] text-slate-500">Bióloga Senior</div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-white border border-slate-200 text-center shadow-sm">
+            <div class="w-8 h-8 mx-auto rounded-full bg-slate-100 text-insa-navy flex items-center justify-center text-xs mb-2">
+              <i class="fa-solid fa-compass-drafting"></i>
+            </div>
+            <div class="font-bold text-xs text-insa-navy">Don Francis</div>
+            <div class="text-[11px] text-slate-500">Geólogo Senior</div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-white border border-slate-200 text-center shadow-sm">
+            <div class="w-8 h-8 mx-auto rounded-full bg-insa-50 text-insa-500 flex items-center justify-center text-xs mb-2">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <div class="font-bold text-xs text-insa-navy">Alexa Young</div>
+            <div class="text-[11px] text-slate-500">Bióloga Jr.</div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-white border border-slate-200 text-center shadow-sm">
+            <div class="w-8 h-8 mx-auto rounded-full bg-slate-100 text-insa-navy flex items-center justify-center text-xs mb-2">
+              <i class="fa-solid fa-gem"></i>
+            </div>
+            <div class="font-bold text-xs text-insa-navy">Robert Rose</div>
+            <div class="text-[11px] text-slate-500">Geólogo Senior</div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-white border border-slate-200 text-center shadow-sm">
+            <div class="w-8 h-8 mx-auto rounded-full bg-insa-50 text-insa-500 flex items-center justify-center text-xs mb-2">
+              <i class="fa-solid fa-landmark"></i>
+            </div>
+            <div class="font-bold text-xs text-insa-navy">Andrés Rocha</div>
+            <div class="text-[11px] text-slate-500">Arqueólogo</div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-white border border-slate-200 text-center shadow-sm">
+            <div class="w-8 h-8 mx-auto rounded-full bg-slate-100 text-insa-navy flex items-center justify-center text-xs mb-2">
+              <i class="fa-solid fa-bone"></i>
+            </div>
+            <div class="font-bold text-xs text-insa-navy">Lisa Driver</div>
+            <div class="text-[11px] text-slate-500">Paleontóloga Senior</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 6. SECCIÓN NUESTRO TRABAJO -->
+  <!-- ========================================================================= -->
+  <section id="experiencia" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="text-xs font-bold tracking-widest uppercase text-insa-500 font-mono" data-i18n="work.tag">Casos & Proyectos</span>
+          <h2 class="text-3xl sm:text-4xl font-black text-insa-navy mt-1" data-i18n="work.title">Nuestro Trabajo en Territorio</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 max-w-md" data-i18n="work.desc">
+          Desde las alturas de la cordillera andina hasta las instalaciones de transporte de energía e infraestructura en San Juan y la región.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-subtle group hover:border-insa-500 transition-all">
+          <div class="h-48 overflow-hidden relative">
+            <img src="images/infra_1.jpg" alt="Subestación Transformadora" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://static.wixstatic.com/media/c90373ff459948b98454f973581ee5a9.jpg'" />
+            <div class="absolute top-3 left-3 px-2 py-1 rounded bg-white/90 text-[10px] font-bold text-insa-navy uppercase tracking-wider shadow-sm">
+              Infraestructura Eléctrica
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-insa-navy mb-2" data-i18n="work.case1Title">Gestión Ambiental ET Cañada Honda & Rivadavia</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4" data-i18n="work.case1Desc">
+              Representación ambiental, regularización de expedientes de residuos peligrosos y cumplimiento de condicionantes de DIA para instalaciones de alta tensión.
+            </p>
+            <div class="flex items-center gap-2 text-[11px] text-insa-600 font-semibold">
+              <i class="fa-solid fa-bolt"></i> <span>Transporte de Alta Tensión</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-subtle group hover:border-insa-navy transition-all">
+          <div class="h-48 overflow-hidden relative">
+            <img src="images/field_geo.jpg" alt="Campañas Geológicas de Campo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://static.wixstatic.com/media/0968ba_f2920e79ec914b08a9c18170c3dc7ac8~mv2.jpg'" />
+            <div class="absolute top-3 left-3 px-2 py-1 rounded bg-white/90 text-[10px] font-bold text-insa-navy uppercase tracking-wider shadow-sm">
+              Geología de Terreno
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-insa-navy mb-2" data-i18n="work.case2Title">Modelamiento Geológico en Alta Cordillera</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4" data-i18n="work.case2Desc">
+              Mapeo geológico estructural, supervisión de perforaciones y estimación de recursos bajo normas internacionales en la faja andina.
+            </p>
+            <div class="flex items-center gap-2 text-[11px] text-insa-navy font-semibold">
+              <i class="fa-solid fa-mountain"></i> <span>Cordillera de los Andes</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-subtle group hover:border-insa-500 transition-all">
+          <div class="h-48 overflow-hidden relative">
+            <img src="images/outcrop.jpg" alt="Auditorías Ambientales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://static.wixstatic.com/media/0968ba_eeb1f116d4f34eb0bd79157a1278a577~mv2.jpg'" />
+            <div class="absolute top-3 left-3 px-2 py-1 rounded bg-white/90 text-[10px] font-bold text-insa-navy uppercase tracking-wider shadow-sm">
+              Auditoría & Cumplimiento
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-insa-navy mb-2" data-i18n="work.case3Title">Auditorías Ambientales en Minería e Industria</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4" data-i18n="work.case3Desc">
+              Auditorías de cumplimiento ambiental en grandes proyectos mineros y plantas industriales bajo estándares normativos e ISO 14001:2015.
+            </p>
+            <div class="flex items-center gap-2 text-[11px] text-insa-600 font-semibold">
+              <i class="fa-solid fa-clipboard-check"></i> <span>Gestión & Normativa</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 7. GALERÍA INTERACTIVA (03 / GALERÍA & PROYECTOS CON FILTROS Y LIGHTBOX) -->
+  <!-- ========================================================================= -->
+  <section id="galeria" class="py-20 bg-slate-50 border-t border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <!-- Encabezado Oficial "03 GALERÍA" -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-insa-500 font-black text-2xl font-mono">03</span>
+            <div class="h-0.5 w-10 bg-insa-500"></div>
+            <span class="text-xs font-bold tracking-widest uppercase text-insa-navy" data-i18n="gallery.sectionTag">Galería & Proyectos</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-black text-insa-navy" data-i18n="gallery.sectionTitle">
+            Galería Fotográfica
+          </h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 max-w-md" data-i18n="gallery.sectionDesc">
+          Registro fotográfico oficial de nuestras actuaciones: paisajes andinos, infraestructura, propiedades y entorno urbano.
+        </p>
+      </div>
+
+      <!-- BOTONES DE FILTRADO POR CATEGORÍAS (Todos, Paisajes, Infraestructura, Propiedades, Ciudad) -->
+      <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-10" id="galleryFilterButtons">
+        <button onclick="filterGallery('all')" class="gallery-filter-btn active px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-insa-500 text-white shadow-sm transition-all flex items-center gap-2" data-category="all">
+          <i class="fa-solid fa-border-all"></i>
+          <span data-i18n="gallery.filterAll">Todos</span>
+          <span class="ml-1 px-1.5 py-0.2 rounded-full bg-white/20 text-[10px]" id="countAll">12</span>
+        </button>
+        <button onclick="filterGallery('paisajes')" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-semibold uppercase tracking-wider bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 transition-all flex items-center gap-2 shadow-sm" data-category="paisajes">
+          <i class="fa-solid fa-mountain text-insa-500"></i>
+          <span data-i18n="gallery.filterLandscapes">Paisajes</span>
+          <span class="ml-1 px-1.5 py-0.2 rounded-full bg-slate-100 text-[10px]" id="countPaisajes">3</span>
+        </button>
+        <button onclick="filterGallery('infraestructura')" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-semibold uppercase tracking-wider bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 transition-all flex items-center gap-2 shadow-sm" data-category="infraestructura">
+          <i class="fa-solid fa-network-wired text-insa-navy"></i>
+          <span data-i18n="gallery.filterInfra">Infraestructura</span>
+          <span class="ml-1 px-1.5 py-0.2 rounded-full bg-slate-100 text-[10px]" id="countInfra">3</span>
+        </button>
+        <button onclick="filterGallery('propiedades')" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-semibold uppercase tracking-wider bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 transition-all flex items-center gap-2 shadow-sm" data-category="propiedades">
+          <i class="fa-solid fa-building-shield text-insa-500"></i>
+          <span data-i18n="gallery.filterProps">Propiedades</span>
+          <span class="ml-1 px-1.5 py-0.2 rounded-full bg-slate-100 text-[10px]" id="countProps">3</span>
+        </button>
+        <button onclick="filterGallery('ciudad')" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-semibold uppercase tracking-wider bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 transition-all flex items-center gap-2 shadow-sm" data-category="ciudad">
+          <i class="fa-solid fa-city text-insa-navy"></i>
+          <span data-i18n="gallery.filterCity">Ciudad</span>
+          <span class="ml-1 px-1.5 py-0.2 rounded-full bg-slate-100 text-[10px]" id="countCiudad">3</span>
+        </button>
+      </div>
+
+      <!-- GRID DE LA GALERÍA -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid">
+        
+        <!-- 1: Paisajes -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden bg-white border border-slate-200 aspect-video cursor-pointer shadow-subtle hover:shadow-card transition-all" data-category="paisajes" onclick="openLightbox(0)">
+          <img src="images/paisaje_1.jpg" alt="Afloramiento Cordillerano" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://static.wixstatic.com/media/24536d_ab0d4bd350ca4ca2ae5f612a18513222f002.jpg'" />
+          <div class="absolute inset-0 bg-gradient-to-t from-insa-navy/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+          <div class="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-white/90 text-[10px] font-bold text-insa-navy uppercase tracking-wider shadow-sm">
+            Paisajes
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white">
+            <h4 class="text-sm font-bold">Afloramiento Cordillerano</h4>
+            <p class="text-[11px] text-slate-200">San Juan, Alta Montaña</p>
+          </div>
+        </div>
+
+        <!-- 2: Paisajes -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden bg-white border border-slate-200 aspect-video cursor-pointer shadow-subtle hover:shadow-card transition-all" data-category="paisajes" onclick="openLightbox(1)">
+          <img src="images/paisaje_2.jpg" alt="Cuenca y Valle Cordillerano" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://static.wixstatic.com/media/24536d_d7181f2005fc4ab39a71299a96b31a78f002.jpg'" />
+          <div class="absolute inset-0 bg-gradient-to-t from-insa-navy/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+          <div class="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-white/90 text-[10px] font-bold text-insa-navy uppercase tracking-wider shadow-sm">
+            Paisajes
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white">
+            <h4 class="text-sm font-bold">Cuenca y Valle Cordillerano</h4>
+            <p class="text-[11px] text-slate-200">Monitoreo Hidrológico</p>
+          </div>
+        </div>
+
+        <!-- 3: Paisajes -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden bg-white border border-slate-200 aspect-video cursor-pointer shadow-subtle hover:shadow-card transition-all" data-category="paisajes" onclick="openLightbox(2)">
+          <img src="images/paisaje_3.jpg" alt="Morfología de Terreno" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://static.wixstatic.com/media/24536d_1ae2a93795804191b8c244ba9b591256f002.jpg'" />
+          <div class="absolute inset-0 bg-gradient-to-t from-insa-navy/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+          <div class="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-white/90 text-[10px] font-bold text-insa-navy uppercase tracking-wider shadow-sm">
+            Paisajes
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white">
+            <h4 class="text-sm font-bold">Morfología de Terreno</h4>
+            <p class="text-[11px] text-slate-200">Exploración Andina</p>
+          </div>
+        </div>
+
+        <!-- 4: Infraestructura -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden bg-white border border-slate-200 aspect-video cursor-pointer shadow-subtle hover:shadow-card transition-all" data-category="infraestructura" onclick="openLightbox(3)">
+          <img src="images/infra_1.jpg" alt="Subestación Transformadora" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://static.wixstatic.com/media/c90373ff459948b98454f973581ee5a9.jpg'" />
+          <div class="absolute inset-0 bg-gradient-to-t from-insa-navy/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+          <div class="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-white/90 text-[10px] font-bold text-insa-navy uppercase tracking-wider shadow-sm">
+            Infraestructura
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white">
+            <h4 class="text-sm font-bold">Subestación Cañada Honda</h4>
+            <p class="text-[11px] text-slate-200">Supervisión Ambiental</p>
+          </div>
+        </div>
+
+        <!-- 5: Infraestructura -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden bg-white border border-slate-200 aspect-video cursor-pointer shadow-subtle hover:shadow-card transition-all" data-category="infraestructura" onclick="openLightbox(4)">
+          <img src="images/infra_2.jpg" alt="Línea de Alta Tensión" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://static.wixstatic.com/media/72600a7027374bb4ab31308d0feffec3.jpeg'" />
+          <div class="absolute inset-0 bg-gradient-to-t from-insa-navy/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+          <div class="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-white/90 text-[10px] font-bold text-insa-navy uppercase tracking-wider shadow-sm">
+            Infraestructura
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white">
+            <h4 class="text-sm font-bold">Línea de Alta Tensión (LAT)</h4>
+            <p class="text-[11px] text-slate-200">Trazabilidad Ambiental</p>
+          </div>
+        </div>
+
+        <!-- 6: Infraestructura -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden bg-white border border-slate-200 aspect-video cursor-pointer shadow-subtle hover:shadow-card transition-all" data-category="infraestructura" onclick="openLightbox(5)">
+          <img src="images/infra_3.jpg" alt="Instalaciones Industriales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://static.wixstatic.com/media/8ec2f7b62e7648f1b2589af18ff47a1c.jpg'" />
+          <div class="absolute inset-0 bg-gradient-to-t from-insa-navy/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+          <div class="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-white/90 text-[10px] font-bold text-insa-navy uppercase tracking-wider shadow-sm">
+            Infraestructura
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white">
+            <h4 class="text-sm font-bold">Planta de Proceso & Acopio</h4>
+            <p class="text-[11px] text-slate-200">Seguridad & Residuos</p>
+          </div>
+        </div>
+
+        <!-- 7: Propiedades -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden bg-white border border-slate-200 aspect-video cursor-pointer shadow-subtle hover:shadow-card transition-all" data-category="propiedades" onclick="openLightbox(6)">
+          <img src="images/prop_1.jpg" alt="Predio y Relevamiento de Sitio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://static.wixstatic.com/media/47c8b082b2ab4e959860179e3ca6ef18.jpg'" />
+          <div class="absolute inset-0 bg-gradient-to-t from-insa-navy/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+          <div class="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-white/90 text-[10px] font-bold text-insa-navy uppercase tracking-wider shadow-sm">
+            Propiedades
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white">
+            <h4 class="text-sm font-bold">Predio & Relevamiento de Sitio</h4>
+            <p class="text-[11px] text-slate-200">Delimitación Territorial</p>
+          </div>
+        </div>
+
+        <!-- 8: Propiedades -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden bg-white border border-slate-200 aspect-video cursor-pointer shadow-subtle hover:shadow-card transition-all" data-category="propiedades" onclick="openLightbox(7)">
+          <img src="images/prop_2.jpg" alt="Campamento y Obras Civiles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://static.wixstatic.com/media/43fe78e395e94309947e29851874917f.jpeg'" />
+          <div class="absolute inset-0 bg-gradient-to-t from-insa-navy/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+          <div class="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-white/90 text-[10px] font-bold text-insa-navy uppercase tracking-wider shadow-sm">
+            Propiedades
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white">
+            <h4 class="text-sm font-bold">Campamento & Obras Civiles</h4>
+            <p class="text-[11px] text-slate-200">Auditoría Operativa</p>
+          </div>
+        </div>
+
+        <!-- 9: Propiedades -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden bg-white border border-slate-200 aspect-video cursor-pointer shadow-subtle hover:shadow-card transition-all" data-category="propiedades" onclick="openLightbox(8)">
+          <img src="images/prop_3.jpg" alt="Sector Industrial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://static.wixstatic.com/media/12be01e610354662bdd9b1508b849215.jpg'" />
+          <div class="absolute inset-0 bg-gradient-to-t from-insa-navy/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+          <div class="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-white/90 text-[10px] font-bold text-insa-navy uppercase tracking-wider shadow-sm">
+            Propiedades
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white">
+            <h4 class="text-sm font-bold">Sector Industrial</h4>
+            <p class="text-[11px] text-slate-200">Gestión de Residuos</p>
+          </div>
+        </div>
+
+        <!-- 10: Ciudad -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden bg-white border border-slate-200 aspect-video cursor-pointer shadow-subtle hover:shadow-card transition-all" data-category="ciudad" onclick="openLightbox(9)">
+          <img src="images/ciudad_1.jpg" alt="Trazado Urbano" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://static.wixstatic.com/media/b9fb2dc195bb43ebb4f2002573bf075d.jpeg'" />
+          <div class="absolute inset-0 bg-gradient-to-t from-insa-navy/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+          <div class="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-white/90 text-[10px] font-bold text-insa-navy uppercase tracking-wider shadow-sm">
+            Ciudad
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white">
+            <h4 class="text-sm font-bold">Trazado Urbano & Vías</h4>
+            <p class="text-[11px] text-slate-200">San Juan Capital</p>
+          </div>
+        </div>
+
+        <!-- 11: Ciudad -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden bg-white border border-slate-200 aspect-video cursor-pointer shadow-subtle hover:shadow-card transition-all" data-category="ciudad" onclick="openLightbox(10)">
+          <img src="images/ciudad_2.jpg" alt="Corredores Logísticos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://static.wixstatic.com/media/b7680f5367c94a749f07d65c029d490f.jpeg'" />
+          <div class="absolute inset-0 bg-gradient-to-t from-insa-navy/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+          <div class="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-white/90 text-[10px] font-bold text-insa-navy uppercase tracking-wider shadow-sm">
+            Ciudad
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white">
+            <h4 class="text-sm font-bold">Corredores Logísticos</h4>
+            <p class="text-[11px] text-slate-200">Conexión Regional</p>
+          </div>
+        </div>
+
+        <!-- 12: Ciudad -->
+        <div class="gallery-item group relative rounded-2xl overflow-hidden bg-white border border-slate-200 aspect-video cursor-pointer shadow-subtle hover:shadow-card transition-all" data-category="ciudad" onclick="openLightbox(11)">
+          <img src="images/ciudad_3.jpg" alt="Desarrollo Regional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://static.wixstatic.com/media/08646e0f028c44f0b3e1d2df01088d28.jpeg'" />
+          <div class="absolute inset-0 bg-gradient-to-t from-insa-navy/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+          <div class="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-white/90 text-[10px] font-bold text-insa-navy uppercase tracking-wider shadow-sm">
+            Ciudad
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white">
+            <h4 class="text-sm font-bold">Desarrollo Regional</h4>
+            <p class="text-[11px] text-slate-200">Estudios de Impacto</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 8. SECCIÓN DE CONTACTO & FORMULARIO INTERACTIVO -->
+  <!-- ========================================================================= -->
+  <section id="contacto" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- INFORMACIÓN INSTITUCIONAL DE CONTACTO (Izquierda) -->
+        <div class="lg:col-span-5 space-y-7">
+          <div>
+            <div class="flex items-center gap-3 mb-2">
+              <span class="text-insa-500 font-black text-2xl font-mono">04</span>
+              <div class="h-0.5 w-10 bg-insa-500"></div>
+              <span class="text-xs font-bold tracking-widest uppercase text-insa-navy" data-i18n="contact.sectionTag">Contáctanos</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-black text-insa-navy mb-3" data-i18n="contact.title">
+              Iniciemos tu Consulta
+            </h2>
+            <p class="text-sm text-slate-600 leading-relaxed" data-i18n="contact.desc">
+              Comunícate con nuestro equipo para evaluar tus proyectos en medio ambiente, geología e ingeniería en San Juan y la región.
+            </p>
+          </div>
+
+          <!-- Canales Directos -->
+          <div class="space-y-4">
+            
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-insa-50 text-insa-500 border border-insa-200 flex items-center justify-center text-lg flex-shrink-0">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-400 uppercase tracking-wider" data-i18n="contact.addressLabel">Oficina Central</div>
+                <div class="text-sm font-semibold text-insa-navy">Av. Virgen de Lourdes 1275</div>
+                <div class="text-xs text-slate-500">5400, San Juan, Argentina</div>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-slate-100 text-insa-navy border border-slate-200 flex items-center justify-center text-lg flex-shrink-0">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-400 uppercase tracking-wider" data-i18n="contact.phoneLabel">Teléfonos / WhatsApp</div>
+                <div class="text-sm font-semibold text-insa-navy">
+                  <a href="tel:+5492645438185" class="hover:text-insa-600 transition-colors">+54 9 264 543-8185</a>
+                </div>
+                <div class="text-xs text-slate-500">
+                  <a href="tel:+5492644032518" class="hover:text-insa-600 transition-colors">+54 9 264 403-2518</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-insa-50 text-insa-500 border border-insa-200 flex items-center justify-center text-lg flex-shrink-0">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-400 uppercase tracking-wider" data-i18n="contact.emailLabel">Correo Electrónico</div>
+                <div class="text-sm font-semibold text-insa-navy">
+                  <a href="mailto:info@insaconsultora.com" class="hover:text-insa-600 transition-colors">info@insaconsultora.com</a>
+                </div>
+                <div class="text-xs text-slate-500" data-i18n="contact.responseCommitment">Atención de Lunes a Viernes de 9 a 17 h</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Redes Sociales Reales -->
+          <div class="pt-3 border-t border-slate-200">
+            <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2.5" data-i18n="contact.socialLabel">Redes Oficiales</div>
+            <div class="flex items-center gap-3">
+              <a href="https://www.linkedin.com/company/insa-consultora/" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-insa-navy hover:text-white text-slate-700 text-xs font-bold transition-all flex items-center gap-2">
+                <i class="fa-brands fa-linkedin text-sm"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://www.instagram.com/insa_consultora?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-insa-500 hover:text-white text-slate-700 text-xs font-bold transition-all flex items-center gap-2">
+                <i class="fa-brands fa-instagram text-sm"></i>
+                <span>Instagram</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- FORMULARIO DE CONTACTO (Derecha) -->
+        <div class="lg:col-span-7">
+          <div class="rounded-3xl bg-white border border-slate-200 p-8 sm:p-10 shadow-card">
+            
+            <h3 class="text-xl font-bold text-insa-navy mb-1" data-i18n="contact.formTitle">Envíanos un Mensaje</h3>
+            <p class="text-xs text-slate-500 mb-6" data-i18n="contact.formSubtitle">Rellena el formulario para obtener más información y descubrir cómo podemos ayudarte.</p>
+
+            <!-- MENSAJE DE CONFIRMACIÓN EN PANTALLA -->
+            <div id="contactSuccessMsg" class="hidden mb-6 p-4 rounded-2xl bg-insa-50 border border-insa-200 text-insa-800 flex items-start gap-3">
+              <i class="fa-solid fa-circle-check text-insa-500 text-xl mt-0.5"></i>
+              <div>
+                <h4 class="font-bold text-sm text-insa-navy" data-i18n="contact.successHeading">¡Hemos recibido tu mensaje!</h4>
+                <p class="text-xs text-slate-600 mt-0.5" data-i18n="contact.successBody">Nuestro equipo de INSA Consultora se comunicará con usted a la brevedad.</p>
+              </div>
+            </div>
+
+            <!-- FORMULARIO -->
+            <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="name" class="block text-xs font-semibold text-slate-700 mb-1" data-i18n="form.nameLabel">Nombre Completo *</label>
+                  <input type="text" id="name" required class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-insa-500 focus:bg-white transition-all" placeholder="Su nombre" />
+                </div>
+                <div>
+                  <label for="company" class="block text-xs font-semibold text-slate-700 mb-1" data-i18n="form.companyLabel">Empresa u Organización</label>
+                  <input type="text" id="company" class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-insa-500 focus:bg-white transition-all" placeholder="Empresa" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="email" class="block text-xs font-semibold text-slate-700 mb-1" data-i18n="form.emailLabel">Correo Electrónico *</label>
+                  <input type="email" id="email" required class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-insa-500 focus:bg-white transition-all" placeholder="correo@ejemplo.com" />
+                </div>
+                <div>
+                  <label for="phone" class="block text-xs font-semibold text-slate-700 mb-1" data-i18n="form.phoneLabel">Teléfono / WhatsApp *</label>
+                  <input type="tel" id="phone" required class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-insa-500 focus:bg-white transition-all" placeholder="+54 9 264 ..." />
+                </div>
+              </div>
+
+              <div>
+                <label for="serviceSelect" class="block text-xs font-semibold text-slate-700 mb-1" data-i18n="form.serviceLabel">Área de Interés *</label>
+                <select id="serviceSelect" required class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-insa-500 focus:bg-white transition-all">
+                  <option value="" disabled selected data-i18n="form.selectPlaceholder">Seleccione un área...</option>
+                  <option value="Medio Ambiente" data-i18n="form.optEnv">Medio Ambiente (Asesoría, DIA, CAA, Residuos Peligrosos)</option>
+                  <option value="Geología" data-i18n="form.optGeo">Geología (Modelos 3D, Estimación de Recursos JORC/NI 43-101)</option>
+                  <option value="Ingeniería" data-i18n="form.optEng">Ingeniería (Minas, Procesos, Obras LAT/SET)</option>
+                  <option value="Otro" data-i18n="form.optOther">Otra consulta técnica</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message" class="block text-xs font-semibold text-slate-700 mb-1" data-i18n="form.messageLabel">Mensaje *</label>
+                <textarea id="message" rows="4" required class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-insa-500 focus:bg-white transition-all resize-none" placeholder="Escriba su consulta..."></textarea>
+              </div>
+
+              <button type="submit" id="submitBtn" class="w-full py-3.5 rounded-xl bg-insa-500 hover:bg-insa-600 text-white font-bold text-sm tracking-wide shadow-md hover:shadow-glow-green transition-all flex items-center justify-center gap-2">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span data-i18n="form.submitBtn">Enviar Mensaje</span>
+              </button>
+
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 9. FOOTER CORPORATIVO (CLARO, ELEGANTE) -->
+  <!-- ========================================================================= -->
+  <footer class="bg-slate-50 border-t border-slate-200 pt-12 pb-8 text-slate-500 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-slate-200">
+        
+        <!-- Identidad INSA -->
+        <div class="space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 bg-white p-1 rounded-xl border border-slate-200 shadow-sm">
+              <img src="isotipo.svg" alt="Isotipo INSA" class="w-full h-full object-contain" />
+            </div>
+            <div>
+              <span class="text-xl font-black text-insa-navy tracking-wider">INSA</span>
+              <span class="text-[9px] font-bold px-1 py-0.5 ml-1 rounded bg-insa-50 text-insa-700 border border-insa-200">CONSULTORA</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed" data-i18n="footer.aboutText">
+            Empresa consultora especializada en asesoría y gestión de Medio Ambiente, Geología e Ingeniería. Soluciones integrales y sostenibles para proyectos en San Juan y la región.
+          </p>
+          <div class="text-xs text-slate-500 flex items-center gap-1.5">
+            <i class="fa-solid fa-location-dot text-insa-500"></i>
+            <span>Av. Virgen de Lourdes 1275, San Juan, ARG</span>
+          </div>
+        </div>
+
+        <!-- Enlaces Rápidos -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-insa-navy mb-3" data-i18n="footer.quickLinks">Navegación</h4>
+          <ul class="space-y-2">
+            <li><a href="#inicio" class="hover:text-insa-navy transition-colors" data-i18n="nav.home">Inicio</a></li>
+            <li><a href="#servicios" class="hover:text-insa-navy transition-colors" data-i18n="nav.services">Servicios</a></li>
+            <li><a href="#nosotros" class="hover:text-insa-navy transition-colors" data-i18n="nav.about">Nosotros</a></li>
+            <li><a href="#experiencia" class="hover:text-insa-navy transition-colors" data-i18n="nav.work">Nuestro Trabajo</a></li>
+            <li><a href="#galeria" class="hover:text-insa-navy transition-colors" data-i18n="nav.gallery">Galería</a></li>
+            <li><a href="#contacto" class="hover:text-insa-navy transition-colors" data-i18n="nav.contact">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Áreas de Especialidad -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-insa-navy mb-3" data-i18n="footer.disciplines">Áreas de Especialidad</h4>
+          <ul class="space-y-2">
+            <li><a href="#servicios" class="hover:text-insa-navy transition-colors">Medio Ambiente (EIA / DIA)</a></li>
+            <li><a href="#servicios" class="hover:text-insa-navy transition-colors">Geología y Modelos 3D</a></li>
+            <li><a href="#servicios" class="hover:text-insa-navy transition-colors">Estimación de Recursos (JORC / NI 43-101)</a></li>
+            <li><a href="#servicios" class="hover:text-insa-navy transition-colors">Ingeniería en Minas y Procesos</a></li>
+            <li><a href="#servicios" class="hover:text-insa-navy transition-colors">Residuos Peligrosos y LAT/SET</a></li>
+          </ul>
+        </div>
+
+        <!-- Enlaces a Redes Sociales Oficiales -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-insa-navy mb-3">Redes Sociales</h4>
+          <p class="text-xs text-slate-500 mb-3">Síguenos en nuestras redes profesionales oficiales:</p>
+          <div class="space-y-2">
+            <a href="https://www.linkedin.com/company/insa-consultora/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs font-semibold text-slate-700 hover:text-insa-navy transition-colors">
+              <i class="fa-brands fa-linkedin text-insa-navy text-sm"></i>
+              <span>INSA Consultora en LinkedIn</span>
+            </a>
+            <a href="https://www.instagram.com/insa_consultora?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs font-semibold text-slate-700 hover:text-insa-500 transition-colors">
+              <i class="fa-brands fa-instagram text-insa-500 text-sm"></i>
+              <span>@insa_consultora en Instagram</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+        <div>
+          <span>© 2026 INSA Consultora.</span>
+          <span class="mx-1 text-slate-400">•</span>
+          <span data-i18n="footer.rights">San Juan, Argentina.</span>
+        </div>
+        <div class="flex items-center gap-4 text-slate-500">
+          <a href="#" class="hover:text-slate-700 transition-colors" data-i18n="footer.terms">Términos y Condiciones</a>
+          <a href="#" class="hover:text-slate-700 transition-colors" data-i18n="footer.privacy">Política de Privacidad</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- LIGHTBOX MODAL PARA LA GALERÍA -->
+  <!-- ========================================================================= -->
+  <div id="lightboxModal" class="hidden fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-sm flex items-center justify-center p-4" onclick="closeLightbox(event)">
+    <div class="relative max-w-5xl w-full flex flex-col items-center" onclick="event.stopPropagation()">
+      
+      <!-- Botón de Cerrar -->
+      <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-white hover:text-insa-300 text-2xl p-2 transition-colors" aria-label="Cerrar imagen ampliada">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Contenedor de la Imagen con Navegación -->
+      <div class="relative w-full max-h-[75vh] flex items-center justify-center overflow-hidden rounded-2xl bg-black">
+        <img id="lightboxImg" src="" alt="Imagen ampliada" class="max-w-full max-h-[75vh] object-contain rounded-2xl" />
+        
+        <!-- Flecha Anterior -->
+        <button onclick="prevLightboxImage()" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-insa-500 hover:text-white text-slate-800 flex items-center justify-center text-sm transition-all shadow-md" aria-label="Imagen anterior">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Flecha Siguiente -->
+        <button onclick="nextLightboxImage()" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-insa-500 hover:text-white text-slate-800 flex items-center justify-center text-sm transition-all shadow-md" aria-label="Imagen siguiente">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Pie de Imagen -->
+      <div class="mt-3 text-center text-white">
+        <div id="lightboxCategory" class="inline-block px-2 py-0.5 rounded bg-insa-500 text-white text-[10px] font-bold uppercase tracking-wider mb-1">Categoría</div>
+        <h4 id="lightboxTitle" class="text-base font-bold">Título de Imagen</h4>
+        <p id="lightboxSubtitle" class="text-xs text-slate-300">Descripción</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 10. JAVASCRIPT VANILLA: I18N, FILTROS, LIGHTBOX Y FORMULARIO -->
+  <!-- ========================================================================= -->
+  <script>
+    /* =========================================================================
+       DICCIONARIO DE TRADUCCIÓN MULTILINGÜE (ES / EN / FR) - SIN COTIZAR
+       ========================================================================= */
+    const translations = {
+      es: {
+        'nav.subtitle': 'Geología • Medio Ambiente • Ingeniería',
+        'nav.home': 'Inicio',
+        'nav.services': 'Servicios',
+        'nav.about': 'Nosotros',
+        'nav.work': 'Nuestro Trabajo',
+        'nav.gallery': 'Galería',
+        'nav.contact': 'Contacto',
+        'nav.ctaContact': 'Contactar',
+
+        'hero.locationBadge': 'Cordillera de San Juan • Argentina',
+        'hero.titleLine1': 'Expertos en',
+        'hero.titleHighlight': 'Medio Ambiente, Geología',
+        'hero.titleLine2': 'e Ingeniería',
+        'hero.description': 'Somos una empresa consultora especializada en asesoría y gestión de medio ambiente, geología e ingeniería en San Juan, Argentina. Brindamos soluciones integrales y sostenibles para proyectos innovadores, promoviendo el cuidado del entorno y el desarrollo responsable.',
+        'hero.ctaServices': 'Explorar Servicios',
+        'hero.ctaContact': 'Contactar Especialista',
+
+        'services.sectionTag': 'Áreas de Expertise',
+        'services.sectionTitle': 'Nuestros Servicios',
+        'services.sectionDesc': 'Brindamos soluciones integrales al negocio minero, desde el inicio de las operaciones de exploración con asesoramiento en Medio Ambiente, para luego integrar con la Geología y finalmente con el diseño de Ingeniería.',
+        
+        'service1.title': 'Medio Ambiente',
+        'service1.subtitle': 'Asesoría y Gestión en Medio Ambiente',
+        'service1.body': 'Gestión ambiental y regulatoria integral. Elaboración de Declaraciones de Impacto Ambiental, Certificados Ambientales Anuales y atención técnica ante los organismos de aplicación.',
+        'service1.item1': 'Evaluaciones y Declaraciones de Impacto Ambiental (EIA / DIA).',
+        'service1.item2': 'Certificados Ambientales Anuales (CAA) y Residuos Peligrosos.',
+        'service1.item3': 'Representación técnica ante la Secretaría de Medio Ambiente (RCA N.º 146).',
+        'service1.item4': 'Auditorías ISO 14001:2015, monitoreos y cumplimiento de condicionantes.',
+
+        'service2.title': 'Geología',
+        'service2.subtitle': 'Modelos Geológicos y Estimación de Recursos',
+        'service2.body': 'Modelamiento geológico 3D y evaluación de recursos minerales con rigor técnico internacional. Especialistas con acreditación AusIMM CP (Geo).',
+        'service2.item1': 'Modelos geológicos estructurales, litológicos y de alteración 3D.',
+        'service2.item2': 'Estimación de Recursos Minerales bajo códigos JORC y NI 43-101.',
+        'service2.item3': 'Supervisión y control de campañas de perforación (DDH y RC).',
+        'service2.item4': 'Mapeo estructural de campo y protocolos de muestreo QA/QC.',
+
+        'service3.title': 'Ingeniería',
+        'service3.subtitle': 'Asesoría en Ingeniería en Minas y Proceso',
+        'service3.body': 'Diseño de ingeniería y supervisión ambiental de infraestructura minera y eléctrica. Optimización de procesos, manejo de escombreras y supervisión en obra.',
+        'service3.item1': 'Optimización de procesos mineros, metalúrgicos y balances de agua.',
+        'service3.item2': 'Diseño y estabilidad de escombreras, diques y pilas de lixiviación.',
+        'service3.item3': 'Supervisión en Estaciones Transformadoras (ET) y Líneas de Alta Tensión (LAT).',
+        'service3.item4': 'Prevención de contingencias operativas y trazabilidad de obra.',
+        'services.quoteBtn': 'Consultar Área Técnica',
+
+        'about.sectionTag': 'Nuestra Empresa y Equipo',
+        'about.sectionTitle': 'Liderando Soluciones Sostenibles',
+        'about.sectionDesc': 'Somos una micro consultora especializada en asesoría y gestión de Medio Ambiente, Geología e Ingeniería con oficinas en San Juan, Mendoza y Salta, Argentina. Ajustándonos a las necesidades de nuestros clientes y adaptando un plan de trabajo especialmente diseñado para cada situación o proyecto.',
+        'about.keyExp': 'Antecedentes Destacados:',
+        'about.multidisciplinary': 'Equipo Multidisciplinario',
+        'about.multidisciplinaryDesc': 'Profesionales especializados que integran nuestros estudios y relevamientos de campo.',
+
+        'work.tag': 'Casos & Proyectos',
+        'work.title': 'Nuestro Trabajo en Territorio',
+        'work.desc': 'Desde las alturas de la cordillera andina hasta las instalaciones de transporte de energía e infraestructura en San Juan y la región.',
+        'work.case1Title': 'Gestión Ambiental ET Cañada Honda & Rivadavia',
+        'work.case1Desc': 'Representación ambiental, regularización de expedientes de residuos peligrosos y cumplimiento de condicionantes de DIA para instalaciones de alta tensión.',
+        'work.case2Title': 'Modelamiento Geológico en Alta Cordillera',
+        'work.case2Desc': 'Mapeo geológico estructural, supervisión de perforaciones y estimación de recursos bajo normas internacionales en la faja andina.',
+        'work.case3Title': 'Auditorías Ambientales en Minería e Industria',
+        'work.case3Desc': 'Auditorías de cumplimiento ambiental en grandes proyectos mineros y plantas industriales bajo estándares normativos e ISO 14001:2015.',
+
+        'gallery.sectionTag': 'Galería & Proyectos',
+        'gallery.sectionTitle': 'Galería Fotográfica',
+        'gallery.sectionDesc': 'Registro fotográfico oficial de nuestras actuaciones: paisajes andinos, infraestructura, propiedades y entorno urbano.',
+        'gallery.filterAll': 'Todos',
+        'gallery.filterLandscapes': 'Paisajes',
+        'gallery.filterInfra': 'Infraestructura',
+        'gallery.filterProps': 'Propiedades',
+        'gallery.filterCity': 'Ciudad',
+
+        'contact.sectionTag': 'Contáctanos',
+        'contact.title': 'Iniciemos tu Consulta',
+        'contact.desc': 'Comunícate con nuestro equipo para evaluar tus proyectos en medio ambiente, geología e ingeniería en San Juan y la región.',
+        'contact.addressLabel': 'Oficina Central',
+        'contact.phoneLabel': 'Teléfonos / WhatsApp',
+        'contact.emailLabel': 'Correo Electrónico',
+        'contact.responseCommitment': 'Atención de Lunes a Viernes de 9 a 17 h',
+        'contact.socialLabel': 'Redes Oficiales',
+        'contact.formTitle': 'Envíanos un Mensaje',
+        'contact.formSubtitle': 'Rellena el formulario para obtener más información y descubrir cómo podemos ayudarte.',
+        'contact.successHeading': '¡Hemos recibido tu mensaje!',
+        'contact.successBody': 'Nuestro equipo de INSA Consultora se comunicará con usted a la brevedad.',
+        'form.nameLabel': 'Nombre Completo *',
+        'form.companyLabel': 'Empresa u Organización',
+        'form.emailLabel': 'Correo Electrónico *',
+        'form.phoneLabel': 'Teléfono / WhatsApp *',
+        'form.serviceLabel': 'Área de Interés *',
+        'form.selectPlaceholder': 'Seleccione un área...',
+        'form.optEnv': 'Medio Ambiente (Asesoría, DIA, CAA, Residuos Peligrosos)',
+        'form.optGeo': 'Geología (Modelos 3D, Estimación de Recursos JORC/NI 43-101)',
+        'form.optEng': 'Ingeniería (Minas, Procesos, Obras LAT/SET)',
+        'form.optOther': 'Otra consulta técnica',
+        'form.messageLabel': 'Mensaje *',
+        'form.submitBtn': 'Enviar Mensaje',
+
+        'footer.aboutText': 'Empresa consultora especializada en asesoría y gestión de Medio Ambiente, Geología e Ingeniería. Soluciones integrales y sostenibles para proyectos en San Juan y la región.',
+        'footer.quickLinks': 'Navegación',
+        'footer.disciplines': 'Áreas de Especialidad',
+        'footer.rights': 'San Juan, Argentina.',
+        'footer.terms': 'Términos y Condiciones',
+        'footer.privacy': 'Política de Privacidad'
+      },
+
+      en: {
+        'nav.subtitle': 'Geology • Environment • Engineering',
+        'nav.home': 'Home',
+        'nav.services': 'Services',
+        'nav.about': 'About Us',
+        'nav.work': 'Our Work',
+        'nav.gallery': 'Gallery',
+        'nav.contact': 'Contact',
+        'nav.ctaContact': 'Contact',
+
+        'hero.locationBadge': 'San Juan Andes Cordillera • Argentina',
+        'hero.titleLine1': 'Experts in',
+        'hero.titleHighlight': 'Environment, Geology',
+        'hero.titleLine2': '& Engineering',
+        'hero.description': 'We are a consulting firm specializing in environmental, geological, and engineering management and advisory in San Juan, Argentina. Our commitment is to deliver comprehensive, sustainable solutions for innovative projects, promoting environmental care and responsible development.',
+        'hero.ctaServices': 'Explore Services',
+        'hero.ctaContact': 'Contact Specialist',
+
+        'services.sectionTag': 'Areas of Expertise',
+        'services.sectionTitle': 'Our Services',
+        'services.sectionDesc': 'We deliver comprehensive solutions to the mining sector, from the beginning of exploration with environmental advisory, integrating with geology and comprehensive engineering design.',
+
+        'service1.title': 'Environment',
+        'service1.subtitle': 'Environmental Advisory & Management',
+        'service1.body': 'Comprehensive environmental and regulatory management. Environmental Impact Declarations, Annual Environmental Certificates, and representation before regulatory agencies.',
+        'service1.item1': 'Environmental Impact Assessments & Declarations (EIA / DIA).',
+        'service1.item2': 'Annual Environmental Certificates (CAA) & Hazardous Waste.',
+        'service1.item3': 'Technical representation before Environmental Authorities (RCA No. 146).',
+        'service1.item4': 'ISO 14001:2015 audits, monitoring and regulatory condition compliance.',
+
+        'service2.title': 'Geology',
+        'service2.subtitle': 'Geological Modeling & Mineral Resource Estimation',
+        'service2.body': '3D geological modeling and mineral resource evaluation with international technical rigor. Specialists with AusIMM CP (Geo) accreditation.',
+        'service2.item1': '3D structural, lithological, and alteration geological modeling.',
+        'service2.item2': 'Mineral Resource Estimation under JORC and NI 43-101 codes.',
+        'service2.item3': 'Supervision and control of drilling campaigns (DDH & RC).',
+        'service2.item4': 'Field structural mapping and QA/QC sampling protocols.',
+
+        'service3.title': 'Engineering',
+        'service3.subtitle': 'Mining & Process Engineering Advisory',
+        'service3.body': 'Engineering design and environmental oversight of mining and electrical infrastructure. Process optimization, waste rock management, and site supervision.',
+        'service3.item1': 'Mining process optimization, metallurgy & water mass balance modeling.',
+        'service3.item2': 'Design & geotechnical stability of waste dumps, dams & leach pads.',
+        'service3.item3': 'Supervision on Subestations (ET) & High Voltage Transmission Lines (LAT).',
+        'service3.item4': 'Operational contingency prevention and site compliance traceability.',
+        'services.quoteBtn': 'Inquire Technical Area',
+
+        'about.sectionTag': 'Our Company & Team',
+        'about.sectionTitle': 'Leading Sustainable Solutions',
+        'about.sectionDesc': 'We are a consulting firm specialized in environmental, geological, and engineering advisory with offices in San Juan, Mendoza, and Salta, Argentina. Adapting specifically to each client and project requirements.',
+        'about.keyExp': 'Selected Credentials:',
+        'about.multidisciplinary': 'Multidisciplinary Team',
+        'about.multidisciplinaryDesc': 'Specialized professionals who carry out our studies and fieldwork surveys.',
+
+        'work.tag': 'Track Record & Projects',
+        'work.title': 'Our On-Site Field Work',
+        'work.desc': 'From the high Andean cordillera to power transmission and industrial facilities across San Juan and the region.',
+        'work.case1Title': 'Cañada Honda & Rivadavia Substation Environmental Management',
+        'work.case1Desc': 'Environmental representation, hazardous waste compliance closure, and DIA fulfillment for high-voltage infrastructure.',
+        'work.case2Title': 'High-Altitude Andean 3D Geological Modeling',
+        'work.case2Desc': 'Structural geological mapping, drilling supervision, and international standard resource estimations in the Andes.',
+        'work.case3Title': 'Environmental Auditing in Mining & Industry',
+        'work.case3Desc': 'Environmental compliance audits in major mining projects and industrial facilities conforming to ISO 14001:2015 standards.',
+
+        'gallery.sectionTag': 'Gallery & Projects',
+        'gallery.sectionTitle': 'Photo Gallery',
+        'gallery.sectionDesc': 'Official photo register from our fieldwork: Andean landscapes, infrastructure, properties, and urban surveys.',
+        'gallery.filterAll': 'All',
+        'gallery.filterLandscapes': 'Landscapes',
+        'gallery.filterInfra': 'Infrastructure',
+        'gallery.filterProps': 'Properties',
+        'gallery.filterCity': 'City',
+
+        'contact.sectionTag': 'Contact Us',
+        'contact.title': 'Start Your Inquiry',
+        'contact.desc': 'Contact our team to assess your environmental, geological, and engineering requirements in San Juan and the region.',
+        'contact.addressLabel': 'Headquarters',
+        'contact.phoneLabel': 'Phone / WhatsApp',
+        'contact.emailLabel': 'Email Address',
+        'contact.responseCommitment': 'Monday to Friday from 9 am to 5 pm',
+        'contact.socialLabel': 'Official Networks',
+        'contact.formTitle': 'Send Us a Message',
+        'contact.formSubtitle': 'Fill out the form below to receive personalized guidance and explore how we can help you.',
+        'contact.successHeading': 'We have received your message!',
+        'contact.successBody': 'Our team at INSA Consultora will contact you shortly.',
+        'form.nameLabel': 'Full Name *',
+        'form.companyLabel': 'Company / Organization',
+        'form.emailLabel': 'Email Address *',
+        'form.phoneLabel': 'Phone / WhatsApp *',
+        'form.serviceLabel': 'Area of Interest *',
+        'form.selectPlaceholder': 'Select an area...',
+        'form.optEnv': 'Environment (Advisory, DIA, CAA, Hazardous Waste)',
+        'form.optGeo': 'Geology (3D Models, JORC/NI 43-101 Resource Estimation)',
+        'form.optEng': 'Engineering (Mining, Process, Electrical Lines)',
+        'form.optOther': 'Other technical inquiry',
+        'form.messageLabel': 'Message *',
+        'form.submitBtn': 'Send Message',
+
+        'footer.aboutText': 'Consulting firm specialized in Environmental, Geology, and Engineering advisory. Comprehensive and sustainable solutions in San Juan and the region.',
+        'footer.quickLinks': 'Navigation',
+        'footer.disciplines': 'Specialties',
+        'footer.rights': 'San Juan, Argentina.',
+        'footer.terms': 'Terms & Conditions',
+        'footer.privacy': 'Privacy Policy'
+      },
+
+      fr: {
+        'nav.subtitle': 'Géologie • Environnement • Ingénierie',
+        'nav.home': 'Accueil',
+        'nav.services': 'Services',
+        'nav.about': 'À Propos',
+        'nav.work': 'Nos Projets',
+        'nav.gallery': 'Galerie',
+        'nav.contact': 'Contact',
+        'nav.ctaContact': 'Contact',
+
+        'hero.locationBadge': 'Cordillère de San Juan • Argentine',
+        'hero.titleLine1': 'Experts en',
+        'hero.titleHighlight': 'Environnement, Géologie',
+        'hero.titleLine2': 'et Ingénierie',
+        'hero.description': 'Nous sommes une société de conseil spécialisée dans la gestion environnementale, la géologie et l’ingénierie à San Juan, Argentine. Notre engagement est d’apporter des solutions durables pour les projets innovants, favorisant le respect de l’environnement.',
+        'hero.ctaServices': 'Explorer les Services',
+        'hero.ctaContact': 'Contacter un Spécialiste',
+
+        'services.sectionTag': 'Domaines d’Expertise',
+        'services.sectionTitle': 'Nos Services',
+        'services.sectionDesc': 'Nous apportons des solutions complètes au secteur minier, depuis l’exploration avec le conseil environnemental jusqu’à la géologie et la conception d’ingénierie.',
+
+        'service1.title': 'Environnement',
+        'service1.subtitle': 'Conseil et Gestion Environnementale',
+        'service1.body': 'Gestion environnementale et réglementaire. Déclarations d’Impact Environnemental, Certificats Environnementaux Annuels et représentation auprès des organismes compétents.',
+        'service1.item1': 'Études et Déclarations d’Impact Environnemental (EIA / DIA).',
+        'service1.item2': 'Certificats Environnementaux Annuels (CAA) & Déchets Dangereux.',
+        'service1.item3': 'Représentation technique agréée (RCA N.º 146).',
+        'service1.item4': 'Audits ISO 14001:2015, suivis et respect des conditions réglementaires.',
+
+        'service2.title': 'Géologie',
+        'service2.subtitle': 'Modèles Géologiques & Estimation des Ressources',
+        'service2.body': 'Modélisation géologique 3D et évaluation des ressources minérales avec rigueur internationale. Spécialistes agréés AusIMM CP (Géo).',
+        'service2.item1': 'Modélisation géologique 3D (structurelle, lithologique, altération).',
+        'service2.item2': 'Estimation des ressources minérales selon les codes JORC et NI 43-101.',
+        'service2.item3': 'Supervision des campagnes de forages (DDH et RC).',
+        'service2.item4': 'Cartographie structurale de terrain et protocoles QA/QC.',
+
+        'service3.title': 'Ingénierie',
+        'service3.subtitle': 'Conseil en Ingénierie Minière et Procédés',
+        'service3.body': 'Conception d’ingénierie et supervision environnementale d’infrastructures minières et électriques. Optimisation des procédés et suivi de chantier.',
+        'service3.item1': 'Optimisation des procédés miniers, métallurgie et bilans d’eau.',
+        'service3.item2': 'Conception géotechnique des haldes et bassins de résidus.',
+        'service3.item3': 'Supervision de Sous-stations (ET) et Lignes Haute Tension (LAT).',
+        'service3.item4': 'Prévention des aléas opérationnels et traçabilité de chantier.',
+        'services.quoteBtn': 'Consulter le Domaine',
+
+        'about.sectionTag': 'Notre Société et Équipe',
+        'about.sectionTitle': 'Pionniers des Solutions Durables',
+        'about.sectionDesc': 'Société de conseil spécialisée en Environnement, Géologie et Ingénierie avec des bureaux à San Juan, Mendoza et Salta, Argentine. Adaptant chaque plan de travail aux spécificités de chaque projet.',
+        'about.keyExp': 'Références Clés :',
+        'about.multidisciplinary': 'Équipe Pluridisciplinaire',
+        'about.multidisciplinaryDesc': 'Des professionnels spécialisés qui réalisent nos études et missions de terrain.',
+
+        'work.tag': 'Réalisations & Projets',
+        'work.title': 'Nos Interventions sur le Terrain',
+        'work.desc': 'Des sommets de la cordillère jusqu’aux infrastructures électriques et industrielles de San Juan et de la région.',
+        'work.case1Title': 'Gestion Environnementale Postes Cañada Honda & Rivadavia',
+        'work.case1Desc': 'Représentation environnementale, régularisation des déchets dangereux et conformité des déclarations DIA.',
+        'work.case2Title': 'Modélisation Géologique en Haute Montagne',
+        'work.case2Desc': 'Cartographie géologique structurale, supervision de sondages et estimations selon les normes internationales.',
+        'work.case3Title': 'Audits Environnementaux dans les Mines et l’Industrie',
+        'work.case3Desc': 'Audits de conformité environnementale sur de grands projets miniers et sites industriels selon la norme ISO 14001:2015.',
+
+        'gallery.sectionTag': 'Galerie & Projets',
+        'gallery.sectionTitle': 'Galerie Photos',
+        'gallery.sectionDesc': 'Registre photographique de nos missions : paysages andins, infrastructures, propriétés et environnement urbain.',
+        'gallery.filterAll': 'Tous',
+        'gallery.filterLandscapes': 'Paysages',
+        'gallery.filterInfra': 'Infrastructure',
+        'gallery.filterProps': 'Propriétés',
+        'gallery.filterCity': 'Ville',
+
+        'contact.sectionTag': 'Contactez-nous',
+        'contact.title': 'Initiez Votre Demande',
+        'contact.desc': 'Contactez notre équipe pour évaluer vos projets environnementaux, géologiques ou d’ingénierie à San Juan.',
+        'contact.addressLabel': 'Siège Social',
+        'contact.phoneLabel': 'Téléphones / WhatsApp',
+        'contact.emailLabel': 'Courrier Électronique',
+        'contact.responseCommitment': 'Du lundi au vendredi de 9h à 17h',
+        'contact.socialLabel': 'Réseaux Officiels',
+        'contact.formTitle': 'Envoyez-nous un Message',
+        'contact.formSubtitle': 'Remplissez le formulaire pour obtenir plus d’informations et découvrir comment nous pouvons vous aider.',
+        'contact.successHeading': 'Message reçu avec succès !',
+        'contact.successBody': 'Notre équipe d’INSA Consultora vous contactera dans les plus brefs délais.',
+        'form.nameLabel': 'Nom Complet *',
+        'form.companyLabel': 'Société ou Organisation',
+        'form.emailLabel': 'Courrier Électronique *',
+        'form.phoneLabel': 'Téléphone / WhatsApp *',
+        'form.serviceLabel': 'Domaine d’Intérêt *',
+        'form.selectPlaceholder': 'Sélectionnez un domaine...',
+        'form.optEnv': 'Environnement (Conseil, DIA, CAA, Déchets Dangereux)',
+        'form.optGeo': 'Géologie (Modèles 3D, Ressources JORC/NI 43-101)',
+        'form.optEng': 'Ingénierie (Mines, Procédés, Lignes Électriques)',
+        'form.optOther': 'Autre demande technique',
+        'form.messageLabel': 'Message *',
+        'form.submitBtn': 'Envoyer le Message',
+
+        'footer.aboutText': 'Société de conseil spécialisée en Environnement, Géologie et Ingénierie. Solutions durables et complètes à San Juan et dans la région.',
+        'footer.quickLinks': 'Navigation',
+        'footer.disciplines': 'Spécialités',
+        'footer.rights': 'San Juan, Argentine.',
+        'footer.terms': 'Conditions Générales',
+        'footer.privacy': 'Politique de Confidentialité'
+      }
+    };
+
+    let currentLang = 'es';
+
+    function setLanguage(lang) {
+      if (!translations[lang]) return;
+      currentLang = lang;
+      localStorage.setItem('insa_lang', lang);
+
+      const flags = { es: '🇦🇷', en: '🇬🇧', fr: '🇫🇷' };
+      const labels = { es: 'ES', en: 'EN', fr: 'FR' };
+      
+      const flagEl = document.getElementById('currentFlag');
+      const labelEl = document.getElementById('currentLangLabel');
+      if (flagEl) flagEl.textContent = flags[lang];
+      if (labelEl) labelEl.textContent = labels[lang];
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+
+      const menu = document.getElementById('langMenu');
+      if (menu) menu.classList.add('hidden');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const langBtn = document.getElementById('langButton');
+      const langMenu = document.getElementById('langMenu');
+      
+      if (langBtn && langMenu) {
+        langBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          langMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!langMenu.contains(e.target) && !langBtn.contains(e.target)) {
+            langMenu.classList.add('hidden');
+          }
+        });
+      }
+
+      const savedLang = localStorage.getItem('insa_lang') || 'es';
+      setLanguage(savedLang);
+      updateGalleryCounts();
+    });
+
+    /* =========================================================================
+       SISTEMA DE FILTRADO DE GALERÍA
+       ========================================================================= */
+    function filterGallery(category) {
+      const items = document.querySelectorAll('.gallery-item');
+      const buttons = document.querySelectorAll('.gallery-filter-btn');
+
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-category') === category) {
+          btn.classList.add('bg-insa-500', 'text-white', 'active');
+          btn.classList.remove('bg-white', 'text-slate-700');
+        } else {
+          btn.classList.remove('bg-insa-500', 'text-white', 'active');
+          btn.classList.add('bg-white', 'text-slate-700');
+        }
+      });
+
+      items.forEach(item => {
+        const itemCat = item.getAttribute('data-category');
+        if (category === 'all' || itemCat === category) {
+          item.style.display = 'block';
+          setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+          }, 20);
+        } else {
+          item.style.opacity = '0';
+          item.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            item.style.display = 'none';
+          }, 200);
+        }
+      });
+    }
+
+    function updateGalleryCounts() {
+      const items = document.querySelectorAll('.gallery-item');
+      let counts = { all: items.length, paisajes: 0, infraestructura: 0, propiedades: 0, ciudad: 0 };
+      
+      items.forEach(item => {
+        const cat = item.getAttribute('data-category');
+        if (counts[cat] !== undefined) counts[cat]++;
+      });
+
+      if (document.getElementById('countAll')) document.getElementById('countAll').textContent = counts.all;
+      if (document.getElementById('countPaisajes')) document.getElementById('countPaisajes').textContent = counts.paisajes;
+      if (document.getElementById('countInfra')) document.getElementById('countInfra').textContent = counts.infraestructura;
+      if (document.getElementById('countProps')) document.getElementById('countProps').textContent = counts.propiedades;
+      if (document.getElementById('countCiudad')) document.getElementById('countCiudad').textContent = counts.ciudad;
+    }
+
+    /* =========================================================================
+       LIGHTBOX PARA LA GALERÍA
+       ========================================================================= */
+    const galleryData = [
+      { src: 'images/paisaje_1.jpg', cat: 'Paisajes', title: 'Afloramiento Cordillerano', desc: 'San Juan, Alta Montaña • Exploración Geológica' },
+      { src: 'images/paisaje_2.jpg', cat: 'Paisajes', title: 'Cuenca y Valle Cordillerano', desc: 'Monitoreo Hidrológico y Línea de Base' },
+      { src: 'images/paisaje_3.jpg', cat: 'Paisajes', title: 'Morfología de Terreno', desc: 'Exploración Andina y Mapeo' },
+      { src: 'images/infra_1.jpg', cat: 'Infraestructura', title: 'Subestación Cañada Honda', desc: 'Supervisión Ambiental de Obra y Residuos' },
+      { src: 'images/infra_2.jpg', cat: 'Infraestructura', title: 'Línea de Alta Tensión (LAT)', desc: 'Trazabilidad y Servidumbres de Paso' },
+      { src: 'images/infra_3.jpg', cat: 'Infraestructura', title: 'Planta de Proceso & Acopio', desc: 'Seguridad y Gestión Integral de Residuos' },
+      { src: 'images/prop_1.jpg', cat: 'Propiedades', title: 'Predio & Relevamiento de Sitio', desc: 'Delimitación Territorial y Línea de Base' },
+      { src: 'images/prop_2.jpg', cat: 'Propiedades', title: 'Campamento & Obras Civiles', desc: 'Auditoría Ambiental y Operativa' },
+      { src: 'images/prop_3.jpg', cat: 'Propiedades', title: 'Sector Industrial', desc: 'Monitoreo de Residuos Especiales' },
+      { src: 'images/ciudad_1.jpg', cat: 'Ciudad', title: 'Trazado Urbano & Vías de Acceso', desc: 'San Juan Capital' },
+      { src: 'images/ciudad_2.jpg', cat: 'Ciudad', title: 'Corredores Logísticos', desc: 'Conexión Minera y Transporte Regional' },
+      { src: 'images/ciudad_3.jpg', cat: 'Ciudad', title: 'Desarrollo Regional', desc: 'Impacto Social y Urbano' }
+    ];
+
+    let currentLightboxIdx = 0;
+
+    function openLightbox(index) {
+      currentLightboxIdx = index;
+      const data = galleryData[index];
+      if (!data) return;
+
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const cat = document.getElementById('lightboxCategory');
+      const title = document.getElementById('lightboxTitle');
+      const desc = document.getElementById('lightboxSubtitle');
+
+      img.src = data.src;
+      cat.textContent = data.cat;
+      title.textContent = data.title;
+      desc.textContent = data.desc;
+
+      modal.classList.remove('hidden');
+      document.body.classList.add('lightbox-active');
+    }
+
+    function closeLightbox(e) {
+      if (e && e.target && e.target.closest && e.target.closest('#lightboxImg')) return;
+      const modal = document.getElementById('lightboxModal');
+      modal.classList.add('hidden');
+      document.body.classList.remove('lightbox-active');
+    }
+
+    function prevLightboxImage() {
+      currentLightboxIdx = (currentLightboxIdx - 1 + galleryData.length) % galleryData.length;
+      openLightbox(currentLightboxIdx);
+    }
+
+    function nextLightboxImage() {
+      currentLightboxIdx = (currentLightboxIdx + 1) % galleryData.length;
+      openLightbox(currentLightboxIdx);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('lightboxModal');
+      if (modal && !modal.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') prevLightboxImage();
+        if (e.key === 'ArrowRight') nextLightboxImage();
+      }
+    });
+
+    /* =========================================================================
+       MENÚ MÓVIL
+       ========================================================================= */
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        if (mobileMenu.classList.contains('hidden')) {
+          menuIcon.className = 'fa-solid fa-bars text-lg';
+        } else {
+          menuIcon.className = 'fa-solid fa-xmark text-lg';
+        }
+      });
+    }
+
+    function closeMobileMenu() {
+      if (mobileMenu) mobileMenu.classList.add('hidden');
+      if (menuIcon) menuIcon.className = 'fa-solid fa-bars text-lg';
+    }
+
+    /* =========================================================================
+       FORMULARIO DE CONTACTO
+       ========================================================================= */
+    function selectServiceInForm(serviceName) {
+      const select = document.getElementById('serviceSelect');
+      if (select) {
+        select.value = serviceName;
+      }
+    }
+
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      const form = document.getElementById('contactForm');
+      const successMsg = document.getElementById('contactSuccessMsg');
+      const submitBtn = document.getElementById('submitBtn');
+
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> <span>Enviando mensaje...</span>';
+
+      setTimeout(() => {
+        if (successMsg) {
+          successMsg.classList.remove('hidden');
+          successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        form.reset();
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      }, 700);
+    }
+  </script>
+</body>
+</html>
